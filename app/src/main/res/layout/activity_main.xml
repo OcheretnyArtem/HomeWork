@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_dz1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/Double_margin"
+        android:text="@string/home_work_1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/Double_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_dz2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/Double_margin"
+        android:text="@string/home_work_2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/Double_text"
+        app:layout_constraintTop_toBottomOf="@+id/button_dz1" />
+
+    <Button
+        android:id="@+id/button_dz3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/Double_margin"
+        android:text="@string/home_work_3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/Double_text"
+        app:layout_constraintTop_toBottomOf="@+id/button_dz2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
