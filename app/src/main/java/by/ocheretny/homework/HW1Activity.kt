@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
 
@@ -17,6 +18,13 @@ class HW1Activity : AppCompatActivity() {
         val textUrl = findViewById<TextView>(R.id.input_text)
         val image = findViewById<ImageView>(R.id.incoming_picture)
 
-        button.setOnClickListener { Picasso.get().load(textUrl.text.toString()).into(image) }
+        button.setOnClickListener {
+            if (textUrl.text.isNullOrEmpty()) {
+                Toast.makeText(this, "you did not enter a URL", Toast.LENGTH_SHORT).show()
+            } else {
+                Picasso.get().load(textUrl.text.toString()).into(image)
+            }
+
+        }
     }
 }
