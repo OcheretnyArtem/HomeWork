@@ -3,4 +3,6 @@
     <string name="home_work_1">Homework 1</string>
     <string name="home_work_2">Homework 2</string>
     <string name="home_work_3">Homework 3</string>
+    <string name="find">find</string>
+    <string name="enter_url">Enter URL</string>
 </resources>
