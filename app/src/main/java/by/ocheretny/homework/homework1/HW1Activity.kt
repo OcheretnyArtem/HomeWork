@@ -1,4 +1,4 @@
-package by.ocheretny.homework
+package by.ocheretny.homework.homework1
 
 import android.os.Bundle
 import android.widget.Button
@@ -6,13 +6,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import by.ocheretny.homework.R
 import com.squareup.picasso.Picasso
 
 class HW1Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wh1)
+        setContentView(R.layout.activity_hw1)
 
         val button = findViewById<Button>(R.id.trigger_button)
         val textUrl = findViewById<TextView>(R.id.input_text)
