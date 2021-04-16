@@ -15,14 +15,14 @@ class HW2ActivityHome : AppCompatActivity() {
         val task1Button = findViewById<Button>(R.id.button_hw2_task1)
         val task2Button = findViewById<Button>(R.id.button_hw2_task2)
 
-        val intentTask1 = Intent(this, HW2ActivityTask1::class.java)
-        val intentTask2 = Intent(this, HW2ActivityTask2::class.java)
-
         task1Button.setOnClickListener {
-            startActivity(intentTask1)
+            val intent = Intent(this, HW2ActivityTask1::class.java)
+            startActivity(intent)
         }
+
         task2Button.setOnClickListener {
-            startActivity(intentTask2)
+            val intent = Intent(this, HW2ActivityTask2::class.java)
+            startActivity(intent)
         }
     }
 }

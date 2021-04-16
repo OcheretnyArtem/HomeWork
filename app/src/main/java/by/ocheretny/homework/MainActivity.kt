@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import by.ocheretny.homework.homework1.HW1Activity
 import by.ocheretny.homework.homework2.HW2ActivityHome
+import by.ocheretny.homework.homework3.HW3Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,18 +17,19 @@ class MainActivity : AppCompatActivity() {
         val buttonDz2 = findViewById<Button>(R.id.button_dz2)
         val buttonDz3 = findViewById<Button>(R.id.button_dz3)
 
-        val intentHW1 = Intent(this, HW1Activity::class.java)
-        val intentHW2 = Intent(this, HW2ActivityHome::class.java)
-
         buttonDz1.setOnClickListener {
-            startActivity(intentHW1)
+            val intent = Intent(this, HW1Activity::class.java)
+            startActivity(intent)
         }
 
         buttonDz2.setOnClickListener {
-            startActivity(intentHW2)
+            val intent = Intent(this, HW2ActivityHome::class.java)
+            startActivity(intent)
         }
 
         buttonDz3.setOnClickListener {
+            val intent = Intent(this, HW3Activity::class.java)
+            startActivity(intent)
         }
     }
 }
