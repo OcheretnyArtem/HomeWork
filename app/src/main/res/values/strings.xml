@@ -7,4 +7,11 @@
     <string name="enter_url">Enter URL</string>
     <string name="task_1">Task 1</string>
     <string name="task_2">Task 2</string>
+    <string name="minsk_region">Minsk Region</string>
+    <string name="rye">Rye</string>
+    <string name="barley">Barley</string>
+    <string name="corn">Corn</string>
+    <string name="brest_region">Brest Region</string>
+    <string name="gomel_region">Gomel Region</string>
+    <string name="_0">0</string>
 </resources>
