@@ -11,9 +11,9 @@ class HW3ViewModel : ViewModel() {
     private val random = Random()
 
     val winner = MutableLiveData<Int>(null)
-    val minsk = MutableLiveData<Region>(Region("minsk", 0))
-    val brest = MutableLiveData<Region>(Region("brest", 1))
-    val gomel = MutableLiveData<Region>(Region("gomel", 2))
+    val minsk = MutableLiveData<Region>(Region( 0))
+    val brest = MutableLiveData<Region>(Region( 1))
+    val gomel = MutableLiveData<Region>(Region( 2))
 
     private val countToWin = 1000
 
@@ -31,6 +31,7 @@ class HW3ViewModel : ViewModel() {
 
             while (winner.value == null) {
                 delay(random.nextInt(3000).toLong())
+                dataChange(brest)
             }
         }
 
@@ -54,7 +55,7 @@ class HW3ViewModel : ViewModel() {
                 it?.countBarley ?: 0 >= countToWin &&
                 it?.countCorn ?: 0 >= countToWin
             ) {
-                winner.value = gomel.value?.id
+                winner.value = region.value?.id
             }
         }
     }
