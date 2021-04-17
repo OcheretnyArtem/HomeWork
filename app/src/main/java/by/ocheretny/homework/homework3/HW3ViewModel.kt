@@ -22,66 +22,39 @@ class HW3ViewModel : ViewModel() {
         viewModelScope.launch {
 
             while (winner.value == null) {
-
                 delay(random.nextInt(3000).toLong())
-
-                minsk.value = minsk.value.also {
-
-                    it?.countRye = it?.countRye?.plus(random.nextInt(100)) ?: 0
-                    it?.countBarley = it?.countBarley?.plus(random.nextInt(100)) ?: 0
-                    it?.countCorn = it?.countCorn?.plus(random.nextInt(100)) ?: 0
-
-                    if (it?.countRye ?: 0 >= countToWin &&
-                        it?.countBarley ?: 0 >= countToWin &&
-                        it?.countCorn ?: 0 >= countToWin
-                    ) {
-                        winner.value = minsk.value?.id
-                    }
-                }
+                dataChange(minsk)
             }
         }
 
         viewModelScope.launch {
 
             while (winner.value == null) {
-
                 delay(random.nextInt(3000).toLong())
-
-                brest.value = brest.value.also {
-
-                    it?.countRye = it?.countRye?.plus(random.nextInt(100)) ?: 0
-                    it?.countBarley = it?.countBarley?.plus(random.nextInt(100)) ?: 0
-                    it?.countCorn = it?.countCorn?.plus(random.nextInt(100)) ?: 0
-
-                    if (it?.countRye ?: 0 >= countToWin &&
-                        it?.countBarley ?: 0 >= countToWin &&
-                        it?.countCorn ?: 0 >= countToWin
-                    ) {
-                        winner.value = brest.value?.id
-                    }
-                }
             }
         }
 
         viewModelScope.launch {
 
             while (winner.value == null) {
-
                 delay(random.nextInt(3000).toLong())
+                dataChange(gomel)
+            }
+        }
+    }
 
-                gomel.value = gomel.value.also {
+    private fun dataChange(region: MutableLiveData<Region>) {
+        region.value = region.value.also {
 
-                    it?.countRye = it?.countRye?.plus(random.nextInt(100)) ?: 0
-                    it?.countBarley = it?.countBarley?.plus(random.nextInt(100)) ?: 0
-                    it?.countCorn = it?.countCorn?.plus(random.nextInt(100)) ?: 0
+            it?.countRye = it?.countRye?.plus(random.nextInt(100)) ?: 0
+            it?.countBarley = it?.countBarley?.plus(random.nextInt(100)) ?: 0
+            it?.countCorn = it?.countCorn?.plus(random.nextInt(100)) ?: 0
 
-                    if (it?.countRye ?: 0 >= countToWin &&
-                        it?.countBarley ?: 0 >= countToWin &&
-                        it?.countCorn ?: 0 >= countToWin
-                    ) {
-                        winner.value = gomel.value?.id
-                    }
-                }
+            if (it?.countRye ?: 0 >= countToWin &&
+                it?.countBarley ?: 0 >= countToWin &&
+                it?.countCorn ?: 0 >= countToWin
+            ) {
+                winner.value = gomel.value?.id
             }
         }
     }
