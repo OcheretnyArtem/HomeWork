@@ -7,6 +7,7 @@ import android.widget.Button
 import by.ocheretny.homework.homework1.HW1Activity
 import by.ocheretny.homework.homework2.HW2ActivityHome
 import by.ocheretny.homework.homework3.HW3Activity
+import by.ocheretny.homework.homework4.HW4Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         buttonDz4.setOnClickListener {
-
+            val intent = Intent(this, HW4Activity::class.java)
+            startActivity(intent)
         }
     }
 }
