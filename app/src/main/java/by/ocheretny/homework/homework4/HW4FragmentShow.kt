@@ -4,17 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStore
 import by.ocheretny.homework.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_hw4_show.*
-import java.nio.channels.Selector
 
 class HW4FragmentShow : Fragment() {
 
@@ -49,9 +47,9 @@ class HW4FragmentShow : Fragment() {
                 position: Int,
                 id: Long
             ) {
-                viewModel.snowdrops[position].observe(requireActivity()) {
-                    days_description_snowdrop.text = it.description
-                    Picasso.get().load(it.ImageURL).into(image_of_snowdrop)
+                viewModel.snowdrops.observe(requireActivity()) {
+                    days_description_snowdrop.text = it[position].description
+                    Picasso.get().load(it[position].ImageURL).into(image_of_snowdrop)
                 }
             }
 
@@ -61,5 +59,6 @@ class HW4FragmentShow : Fragment() {
     }
 }
 
-private fun getNameOfSnowdrop(list: ArrayList<MutableLiveData<Snowdrop>>) =
-    list.mapNotNull { it.value?.name }.toTypedArray()
+private fun getNameOfSnowdrop(list: LiveData<ArrayList<Snowdrop>>): Array<String> {
+    return list.value?.map { it.name }?.toTypedArray() ?: arrayOf("")
+}
