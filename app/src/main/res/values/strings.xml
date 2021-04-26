@@ -14,4 +14,14 @@
     <string name="brest_region">Brest Region</string>
     <string name="gomel_region">Gomel Region</string>
     <string name="_0">0</string>
+    <string name="homework_4">homework 4</string>
+    <string name="add">add</string>
+    <string name="show">show</string>
+    <string name="enter_name">enter name</string>
+    <string name="enter_url_of_image">enter URL of image</string>
+    <string name="save">save</string>
+    <string name="enter_description">enter description</string>
+    <string name="homework_5">homework 5</string>
+    <string name="homework_6">homework 6</string>
+    <string name="homework_7">homework 7</string>
 </resources>
