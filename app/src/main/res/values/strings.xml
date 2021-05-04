@@ -3,6 +3,9 @@
     <string name="home_work_1">Homework 1</string>
     <string name="home_work_2">Homework 2</string>
     <string name="home_work_3">Homework 3</string>
+    <string name="homework_5">homework 5</string>
+    <string name="homework_6">homework 6</string>
+    <string name="homework_7">homework 7</string>
     <string name="find">find</string>
     <string name="enter_url">Enter URL</string>
     <string name="task_1">Task 1</string>
@@ -21,7 +24,14 @@
     <string name="enter_url_of_image">enter URL of image</string>
     <string name="save">save</string>
     <string name="enter_description">enter description</string>
-    <string name="homework_5">homework 5</string>
-    <string name="homework_6">homework 6</string>
-    <string name="homework_7">homework 7</string>
+    <string name="ok">Ok</string>
+    <string name="sing_in">sing in</string>
+    <string name="please_enter_name">please enter name</string>
+    <string name="please_enter_password">please enter password</string>
+    <string name="apply">apply</string>
+    <string name="registration">registration</string>
+    <string name="registration_complete">registration is complete</string>
+    <string name="welcome">Welcome</string>
+    <string name="field_is_empty">Field is empty</string>
+    <string name="password_less_then_8">Password is less then 8 characters</string>
 </resources>
