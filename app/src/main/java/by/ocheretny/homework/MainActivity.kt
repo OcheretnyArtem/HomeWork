@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val buttonDz5 = findViewById<Button>(R.id.button_dz5)
         val buttonDz6 = findViewById<Button>(R.id.button_dz6)
         val buttonDz7 = findViewById<Button>(R.id.button_dz7)
+        val buttonDz8 = findViewById<Button>(R.id.button_dz8)
 
         buttonDz1.setOnClickListener {
             val intent = Intent(this, HW1Activity::class.java)
@@ -49,6 +50,9 @@ class MainActivity : AppCompatActivity() {
 
         }
         buttonDz7.setOnClickListener {
+
+        }
+        buttonDz8.setOnClickListener {
 
         }
     }

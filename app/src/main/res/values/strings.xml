@@ -34,4 +34,5 @@
     <string name="welcome">Welcome</string>
     <string name="field_is_empty">Field is empty</string>
     <string name="password_less_then_8">Password is less then 8 characters</string>
+    <string name="homework_8">homework 8</string>
 </resources>
