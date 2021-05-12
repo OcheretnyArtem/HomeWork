@@ -4,6 +4,7 @@ import by.ocheretny.homework.homework8.dataBase.CoffeeDataBase
 import by.ocheretny.homework.homework8.dataBase.entity.Coffee
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class CoffeeRepository(
@@ -12,20 +13,29 @@ class CoffeeRepository(
     private val dao = database.coffeeDao()
     private val ioScope = CoroutineScope(Dispatchers.IO)
 
-    fun insert(coffee: Coffee){
+    fun insert(coffee: Coffee) {
         ioScope.launch {
             dao.insert(coffee)
         }
     }
 
-    fun delete(coffee: Coffee){
+    fun delete(coffee: Coffee) {
         ioScope.launch {
             dao.delete(coffee)
         }
     }
-    fun update(coffee: Coffee){
+
+    fun update(id: Int, name: String, prise: Int, url: String) {
         ioScope.launch {
-            dao.update(coffee)
+            dao.update(id, name, prise, url)
         }
+    }
+
+    suspend fun getAll(): List<Coffee> {
+        return ioScope.async { dao.getAll() }.await()
+    }
+
+    suspend fun getNames(): List<String> {
+        return ioScope.async { dao.getNames() }.await()
     }
 }

@@ -9,6 +9,7 @@ import by.ocheretny.homework.homework2.HW2ActivityHome
 import by.ocheretny.homework.homework3.HW3Activity
 import by.ocheretny.homework.homework4.HW4Activity
 import by.ocheretny.homework.homework5.HW5Activity
+import by.ocheretny.homework.homework8.HW8Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +54,8 @@ class MainActivity : AppCompatActivity() {
 
         }
         buttonDz8.setOnClickListener {
-
+            val intent = Intent(this,HW8Activity::class.java)
+            startActivity(intent)
         }
     }
 }

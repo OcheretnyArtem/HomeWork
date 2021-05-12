@@ -7,6 +7,7 @@
     android:elevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/coffee_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -24,18 +25,24 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/Double_margin"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/hw8_coffee_price"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/hw8_coffee_image"
-            app:layout_constraintTop_toTopOf="@+id/hw8_coffee_image" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/hw8_coffee_price"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/Double_margin"
-            app:layout_constraintBottom_toBottomOf="@+id/hw8_coffee_image"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/hw8_coffee_image" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/hw8_coffee_image"
+            app:layout_constraintTop_toBottomOf="@+id/hw8_coffee_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

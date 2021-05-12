@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey
 data class Coffee(
     @ColumnInfo(name = "coffee_name")
     val name: String,
-    @ColumnInfo(name = "coffee_imj")
-    val imjURL: String,
+    @ColumnInfo(name = "coffee_image")
+    val imageURL: String,
     @ColumnInfo(name = "coffee_price")
     val price: Int,
 ) {
