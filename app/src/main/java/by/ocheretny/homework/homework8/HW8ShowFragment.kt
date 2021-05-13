@@ -50,7 +50,7 @@ class HW8ShowFragment : Fragment() {
         }
 
         addButton.setOnClickListener {
-            findNavController().navigate(R.id.HW8AddFragment)
+            findNavController().navigate(R.id.show_HW8AddFragment)
         }
         finder.editText?.addTextChangedListener{
             if (!it.isNullOrEmpty()) viewModel.find(it.toString())

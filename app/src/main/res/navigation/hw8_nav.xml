@@ -8,23 +8,22 @@
     <fragment
         android:id="@+id/HW8ShowFragment"
         android:name="by.ocheretny.homework.homework8.HW8ShowFragment"
-        android:label="HW8ShowFragment"
-        tools:layout="@layout/fragment_hw8_show">
+        android:label="HW8ShowFragment">
         <action
             android:id="@+id/show_HW8AddFragment"
-            app:destination="@id/HW8AddFragment" />
+            app:destination="@id/HW8AddFragment"
+            app:popUpTo="@id/HW8ShowFragment" />
         <action
             android:id="@+id/show_HW8UpdateFragment"
-            app:destination="@id/HW8UpdateFragment" />
+            app:destination="@id/HW8UpdateFragment"
+            app:popUpTo="@id/HW8ShowFragment" />
     </fragment>
     <fragment
         android:id="@+id/HW8AddFragment"
         android:name="by.ocheretny.homework.homework8.HW8AddFragment"
-        android:label="HW8AddFragment"
-        tools:layout="@layout/fragment_hw8_add"/>
+        android:label="HW8AddFragment" />
     <fragment
         android:id="@+id/HW8UpdateFragment"
         android:name="by.ocheretny.homework.homework8.HW8UpdateFragment"
-        android:label="HW8UpdateFragment"
-        tools:layout="@layout/fragment_hw8_update"/>
+        android:label="HW8UpdateFragment"/>
 </navigation>

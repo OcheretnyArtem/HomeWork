@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import by.ocheretny.homework.R
 import by.ocheretny.homework.homework8.dataBase.entity.Coffee
 import com.google.android.material.textfield.TextInputLayout
@@ -62,7 +63,7 @@ class HW8AddFragment : Fragment() {
                     fieldPrice.editText?.text.toString().toInt()
                 )
             )
-            activity?.supportFragmentManager?.popBackStack()
+            findNavController().popBackStack()
         }
     }
 }

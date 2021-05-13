@@ -28,7 +28,7 @@ class CoffeeAdapter(val coffees: List<Coffee>, val viewModel: HW8ViewModel) :
 
             itemView.findViewById<ConstraintLayout>(R.id.coffee_card).setOnClickListener {
                 viewModel.selectedCoffee.value = coffee
-                view.findNavController().navigate(R.id.HW8UpdateFragment)
+                view.findNavController().navigate(R.id.show_HW8UpdateFragment)
             }
         }
     }
