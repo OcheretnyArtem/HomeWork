@@ -35,7 +35,7 @@ class CoffeeRepository(
         return ioScope.async { dao.getAll() }.await()
     }
 
-    suspend fun getNames(): List<String> {
-        return ioScope.async { dao.getNames() }.await()
+    suspend fun find(name: String):List<Coffee>{
+        return ioScope.async { dao.find(name) }.await()
     }
 }

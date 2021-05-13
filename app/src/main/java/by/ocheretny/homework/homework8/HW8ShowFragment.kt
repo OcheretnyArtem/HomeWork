@@ -5,21 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import by.ocheretny.homework.R
-import by.ocheretny.homework.homework8.dataBase.entity.Coffee
 import by.ocheretny.homework.homework8.recycler.CoffeeAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.fragment_hw8_show.*
+import com.google.android.material.textfield.TextInputLayout
 
-//    private val viewModel by lazy {
-//        ViewModelProvider.AndroidViewModelFactory(requireActivity().application)
-//            .create(HW8ViewModel::class.java)
-//    }
 
 class HW8ShowFragment : Fragment() {
 
@@ -41,6 +36,7 @@ class HW8ShowFragment : Fragment() {
         val recycler = view.findViewById<RecyclerView>(R.id.hw8_recycler)
         val addButton = view.findViewById<FloatingActionButton>(R.id.hw8_add_button)
         val progressBar = view.findViewById<ProgressBar>(R.id.hw8_progress_bar)
+        val finder = view.findViewById<TextInputLayout>(R.id.text_finder)
 
         viewModel.getAll()
 
@@ -55,6 +51,10 @@ class HW8ShowFragment : Fragment() {
 
         addButton.setOnClickListener {
             findNavController().navigate(R.id.HW8AddFragment)
+        }
+        finder.editText?.addTextChangedListener{
+            if (!it.isNullOrEmpty()) viewModel.find(it.toString())
+            else viewModel.getAll()
         }
     }
 

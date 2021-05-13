@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import by.ocheretny.homework.homework8.dataBase.CoffeeDataBase
 import by.ocheretny.homework.homework8.dataBase.entity.Coffee
 import by.ocheretny.homework.homework8.repository.CoffeeRepository
@@ -16,12 +15,8 @@ class HW8ViewModel(application: Application) : AndroidViewModel(application) {
 
      val selectedCoffee = MutableLiveData<Coffee>()
 
-
     private val _listOfCoffee = MutableLiveData<List<Coffee>>()
     val listOfCoffee: LiveData<List<Coffee>> = _listOfCoffee
-
-    private val _coffeeNames = MutableLiveData<String>()
-    val coffeeNames: LiveData<String> = _coffeeNames
 
     private val coffeeRepository = CoffeeRepository(CoffeeDataBase.getCoffeeDataBase(application))
     private val ioScope = CoroutineScope(Dispatchers.IO)
@@ -51,11 +46,12 @@ class HW8ViewModel(application: Application) : AndroidViewModel(application) {
             _isLoading.postValue(false)
         }
     }
-    fun getNames(){
+
+    fun find(name: String){
         ioScope.launch {
-            _coffeeNames.postValue(coffeeRepository.getNames().toString())
+            val coffeeList = coffeeRepository.find(name)
+            _listOfCoffee.postValue(coffeeList)
         }
     }
-
 
 }

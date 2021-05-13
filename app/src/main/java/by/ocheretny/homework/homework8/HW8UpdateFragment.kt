@@ -11,9 +11,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import by.ocheretny.homework.R
-import by.ocheretny.homework.homework5.NAME
-import by.ocheretny.homework.homework5.WelcomeActivity
-import by.ocheretny.homework.homework8.dataBase.entity.Coffee
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
 
@@ -35,8 +32,6 @@ class HW8UpdateFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val coffee = viewModel.selectedCoffee.value
-
-        val ff = coffee?.id
 
         val fieldName = view.findViewById<TextInputLayout>(R.id.hw8_update_name_field)
         val fieldURL = view.findViewById<TextInputLayout>(R.id.hw8_update_URL_field)

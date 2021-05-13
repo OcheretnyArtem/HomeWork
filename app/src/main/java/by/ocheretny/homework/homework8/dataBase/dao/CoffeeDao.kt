@@ -18,6 +18,6 @@ interface CoffeeDao {
     @Query("SELECT * FROM coffee_table")
     suspend fun getAll(): List<Coffee>
 
-    @Query("SELECT coffee_name FROM coffee_table")
-    suspend fun getNames(): List<String>
+    @Query("SELECT * FROM coffee_table WHERE coffee_name LIKE '%' || :name || '%'")
+    suspend fun find(name: String): List<Coffee>
 }
