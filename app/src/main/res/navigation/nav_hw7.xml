@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_hw7"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="by.ocheretny.homework.homework7.HW7FirstFragment"
+        android:label="HW7FirstFragment"
+        tools:layout="@layout/fragment_hw7_first">
+        <action
+            android:id="@+id/show_HW7SecondFragment"
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/firstFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="by.ocheretny.homework.homework7.HW7SecondFragment"
+        android:label="HW7MainFragment"
+        tools:layout="@layout/fragment_hw7_second">
+
+        <action
+            android:id="@+id/show_HW7TextFragment"
+            app:destination="@id/textFragment"
+            app:popUpTo="@id/secondFragment"/>
+        <action
+            android:id="@+id/show_HW7ImageFragment"
+            app:destination="@id/imageFragment"
+            app:popUpTo="@id/secondFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="by.ocheretny.homework.homework7.HW7ImageFragment"
+        android:label="HW7ImageFragment"
+        tools:layout="@layout/fragment_hw7_image" />
+    <fragment
+        android:id="@+id/textFragment"
+        android:name="by.ocheretny.homework.homework7.HW7TextFragment"
+        android:label="HW7TextFragment"
+        tools:layout="@layout/fragment_hw7_text" />
+
+</navigation>

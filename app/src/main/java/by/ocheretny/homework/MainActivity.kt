@@ -8,6 +8,7 @@ import by.ocheretny.homework.homework1.HW1Activity
 import by.ocheretny.homework.homework2.HW2ActivityHome
 import by.ocheretny.homework.homework3.HW3Activity
 import by.ocheretny.homework.homework4.HW4Activity
+import by.ocheretny.homework.homework7.HW7Activity
 import by.ocheretny.homework.homework5.HW5Activity
 import by.ocheretny.homework.homework8.HW8Activity
 
@@ -21,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         val buttonDz3 = findViewById<Button>(R.id.button_dz3)
         val buttonDz4 = findViewById<Button>(R.id.button_dz4)
         val buttonDz5 = findViewById<Button>(R.id.button_dz5)
-        val buttonDz6 = findViewById<Button>(R.id.button_dz6)
         val buttonDz7 = findViewById<Button>(R.id.button_dz7)
         val buttonDz8 = findViewById<Button>(R.id.button_dz8)
 
@@ -47,11 +47,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HW5Activity::class.java)
             startActivity(intent)
         }
-        buttonDz6.setOnClickListener {
 
-        }
         buttonDz7.setOnClickListener {
-
+            val intent = Intent(this, HW7Activity::class.java)
+            startActivity(intent)
         }
         buttonDz8.setOnClickListener {
             val intent = Intent(this,HW8Activity::class.java)
