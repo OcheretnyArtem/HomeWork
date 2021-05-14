@@ -11,6 +11,7 @@ import by.ocheretny.homework.homework4.HW4Activity
 import by.ocheretny.homework.homework7.HW7Activity
 import by.ocheretny.homework.homework5.HW5Activity
 import by.ocheretny.homework.homework8.HW8Activity
+import by.ocheretny.homework.homework9.HW9Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val buttonDz5 = findViewById<Button>(R.id.button_dz5)
         val buttonDz7 = findViewById<Button>(R.id.button_dz7)
         val buttonDz8 = findViewById<Button>(R.id.button_dz8)
+        val buttonDz9 = findViewById<Button>(R.id.button_dz9)
 
         buttonDz1.setOnClickListener {
             val intent = Intent(this, HW1Activity::class.java)
@@ -39,10 +41,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HW3Activity::class.java)
             startActivity(intent)
         }
+
         buttonDz4.setOnClickListener {
             val intent = Intent(this, HW4Activity::class.java)
             startActivity(intent)
         }
+
         buttonDz5.setOnClickListener {
             val intent = Intent(this, HW5Activity::class.java)
             startActivity(intent)
@@ -52,9 +56,16 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HW7Activity::class.java)
             startActivity(intent)
         }
+
         buttonDz8.setOnClickListener {
-            val intent = Intent(this,HW8Activity::class.java)
+            val intent = Intent(this, HW8Activity::class.java)
             startActivity(intent)
         }
+
+        buttonDz9.setOnClickListener {
+            val intent = Intent(this, HW9Activity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

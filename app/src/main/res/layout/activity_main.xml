@@ -46,6 +46,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/Double_text"
         app:layout_constraintTop_toBottomOf="@+id/button_dz3" />
+
     <Button
         android:id="@+id/button_dz5"
         android:layout_width="match_parent"
@@ -65,6 +66,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/Double_text"
         app:layout_constraintTop_toBottomOf="@+id/button_dz5" />
+
     <Button
         android:id="@+id/button_dz8"
         android:layout_width="match_parent"
@@ -74,5 +76,15 @@
         android:textColor="@color/black"
         android:textSize="@dimen/Double_text"
         app:layout_constraintTop_toBottomOf="@+id/button_dz7" />
+
+    <Button
+        android:id="@+id/button_dz9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/Double_margin"
+        android:text="@string/homework_9"
+        android:textColor="@color/black"
+        android:textSize="@dimen/Double_text"
+        app:layout_constraintTop_toBottomOf="@+id/button_dz8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
