@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import by.ocheretny.homework.R
 import by.ocheretny.homework.homework9.data.entities.crypto.Crypto
 
-class CoinAdapter(val coins: List<Crypto>) : RecyclerView.Adapter<CoinAdapter.CryptoViewHolder>() {
+class CryptoAdapter(val crypto: List<Crypto>) : RecyclerView.Adapter<CryptoAdapter.CryptoViewHolder>() {
 
     inner class CryptoViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
         fun setData(itemView: View, position: Int) {
 
-            val crypto = coins[position]
+            val crypto = crypto[position]
             val image = itemView.findViewById<ImageView>(R.id.hw9_trending)
 
             when {
@@ -50,6 +50,6 @@ class CoinAdapter(val coins: List<Crypto>) : RecyclerView.Adapter<CoinAdapter.Cr
     }
 
     override fun getItemCount(): Int {
-        return coins.size
+        return crypto.size
     }
 }

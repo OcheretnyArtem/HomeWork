@@ -3,16 +3,13 @@ package by.ocheretny.homework.homework9
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import by.ocheretny.homework.R
-import by.ocheretny.homework.homework8.HW8ViewModel
 import by.ocheretny.homework.homework9.data.HW9ViewModel
-import by.ocheretny.homework.homework9.recycler.CoinAdapter
+import by.ocheretny.homework.homework9.recycler.CryptoAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import retrofit2.Response.error
 
 class HW9Activity : AppCompatActivity() {
     private val viewModel by lazy {
@@ -29,7 +26,7 @@ class HW9Activity : AppCompatActivity() {
         viewModel.loadData("fdb38449-f48e-41bd-97f9-b6860ee8edb5")
 
         viewModel.coins.observe(this){
-            val coinAdapter = CoinAdapter(it)
+            val coinAdapter = CryptoAdapter(it)
             recycler.adapter = coinAdapter
         }
 
