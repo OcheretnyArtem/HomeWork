@@ -12,8 +12,8 @@ import retrofit2.create
 object CryptoApi {
 
     fun provideRetrofit(): CryptoService {
+
         val interceptor = HttpLoggingInterceptor().apply {
-            if (BuildConfig.DEBUG)
                 level = HttpLoggingInterceptor.Level.BODY
         }
 

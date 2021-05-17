@@ -9,13 +9,15 @@ class CryptoRepository {
     private val api = CryptoApi.provideRetrofit()
     private val cryptoResponseMapper = CryptoResponseMapper()
 
-    suspend fun loadData(key: String):List<Crypto>{
+    suspend fun loadData(key: String): List<Crypto> {
         val response = api.loadData(key)
-        return if (response.isSuccessful){
+
+
+        return if (response.isSuccessful) {
             response.body()?.data?.map {
                 cryptoResponseMapper.map(it)
             }.orEmpty()
-        }else{
+        } else {
             throw Throwable(response.errorBody().toString())
         }
     }

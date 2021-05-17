@@ -18,15 +18,21 @@ class HW9ViewModel : ViewModel() {
     private val _coins = MutableLiveData<List<Crypto>>()
     val coins: LiveData<List<Crypto>> = _coins
 
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
+
     private val _errorBus = MutableLiveData<String>()
     val errorBus: LiveData<String> = _errorBus
 
     fun loadData(key: String){
+        _isLoading.value = true
         ioScope.launch {
             try {
                 _coins.postValue(cryptoRepository.loadData(key))
+                _isLoading.postValue(false)
             }catch (e:Exception){
                 _errorBus.postValue(e.message)
+                _isLoading.postValue(false)
             }
         }
     }
