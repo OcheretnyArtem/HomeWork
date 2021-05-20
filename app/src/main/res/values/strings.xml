@@ -51,4 +51,7 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="dollar">$</string>
+    <string name="homework_9">homework 9</string>
+    <string name="error">Error</string>
+    <string name="percent">%</string>
 </resources>

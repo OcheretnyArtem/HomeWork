@@ -16,6 +16,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/hw8_nav"/>
+        app:navGraph="@navigation/nav_hw8"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
