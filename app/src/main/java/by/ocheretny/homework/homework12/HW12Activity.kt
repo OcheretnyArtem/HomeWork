@@ -22,18 +22,18 @@ private const val API_KEY = "a199291d-e42b-4002-9aa5-6c3d78d5916c"
 class HW12Activity : AppCompatActivity() {
 
     private lateinit var disposables: CompositeDisposable
-    private val time =  Calendar.getInstance().timeInMillis
+    private val time = Calendar.getInstance().timeInMillis
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hw12)
 
-         val month = SimpleDateFormat("MM")
-         val day = SimpleDateFormat("dd")
+        val month = SimpleDateFormat("MM")
+        val day = SimpleDateFormat("dd")
 
         val myMonth = month.format(Date(time)).toString().toInt()
-        val myDay = month.format(Date(time)).toString().toInt()
+        val myDay = day.format(Date(time)).toString().toInt()
 
         val adapter = HolidayAdapter()
 
@@ -86,7 +86,6 @@ class HW12Activity : AppCompatActivity() {
 
             }, {})
     }
-
     override fun onDestroy() {
         super.onDestroy()
         disposables.clear()
