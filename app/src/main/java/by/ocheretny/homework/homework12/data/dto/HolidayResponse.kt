@@ -8,8 +8,6 @@ data class HolidayResponse(
     val holidays: List<Holiday?>?,
 ) {
     data class Holiday(
-        @SerializedName("country")
-        val country: String?,
         @SerializedName("date")
         val date: String?,
         @SerializedName("name")
