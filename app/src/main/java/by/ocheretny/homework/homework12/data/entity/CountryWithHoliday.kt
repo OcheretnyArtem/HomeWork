@@ -4,6 +4,6 @@ data class CountryWithHoliday(
     val code: String? = null,
     val flag: String? = null,
     val countryName: String? = null,
-    val date: String? = null,
-    val holidayName: String? = null
+    var date: String? = null,
+    var holidayName: String? = null
 )

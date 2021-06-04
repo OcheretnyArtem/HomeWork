@@ -20,15 +20,17 @@ class HolidayAdapter : RecyclerView.Adapter<HolidayAdapter.HolidayViewHolder>() 
         notifyDataSetChanged()
     }
 
-    fun updateItem(item: CountryWithHoliday) {
+    fun updateItem(item: CountryWithHoliday?) {
 
         val oldItem = list.find {
-            it.code == item.code
+            it.code == item?.code
         }
 
         val oldItemIndex = list.indexOf(oldItem)
 
-        list[oldItemIndex] = item
+        if (item != null) {
+            list[oldItemIndex] = item
+        }
 
         notifyDataSetChanged()
     }

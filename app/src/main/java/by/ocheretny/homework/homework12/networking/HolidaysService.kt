@@ -21,13 +21,13 @@ interface HolidaysService {
         @Query("country")
         countryCode: String,
         @Query("year")
-        year: Int,
+        year: Int = 2020,
         @Query("month")
         month: Int,
         @Query("day")
         day: Int,
         @Query("upcoming")
-        upcoming: Boolean,
+        upcoming: Boolean = true,
     ): Observable<HolidayResponse>
 
 
