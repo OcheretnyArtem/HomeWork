@@ -1,4 +1,4 @@
-package by.ocheretny.homework.homework12.data.mapper
+package by.ocheretny.homework.homework12.mappers
 
 import by.ocheretny.homework.homework12.data.dto.HolidayResponse
 import by.ocheretny.homework.homework12.data.entity.Holiday
