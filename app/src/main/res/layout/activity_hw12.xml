@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homework12.HW12Activity">
+    tools:context=".homework12.HW12Activity"
+    android:background="@color/Background">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/hw12_recycler"
