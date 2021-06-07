@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import by.ocheretny.homework.homework1.HW1Activity
+import by.ocheretny.homework.homework12.HW12Activity
 import by.ocheretny.homework.homework2.HW2ActivityHome
 import by.ocheretny.homework.homework3.HW3Activity
 import by.ocheretny.homework.homework4.HW4Activity
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val buttonDz7 = findViewById<Button>(R.id.button_dz7)
         val buttonDz8 = findViewById<Button>(R.id.button_dz8)
         val buttonDz9 = findViewById<Button>(R.id.button_dz9)
+        val buttonDz12 = findViewById<Button>(R.id.button_dz12)
 
         buttonDz1.setOnClickListener {
             val intent = Intent(this, HW1Activity::class.java)
@@ -64,6 +66,11 @@ class MainActivity : AppCompatActivity() {
 
         buttonDz9.setOnClickListener {
             val intent = Intent(this, HW9Activity::class.java)
+            startActivity(intent)
+        }
+
+        buttonDz12.setOnClickListener {
+            val intent = Intent(this, HW12Activity::class.java)
             startActivity(intent)
         }
 
